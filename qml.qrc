@@ -9,5 +9,6 @@
         <file>MasterController.qml</file>
         <file>PageList.qml</file>
         <file>MainScreen.qml</file>
+        <file>SpellList.qml</file>
     </qresource>
 </RCC>

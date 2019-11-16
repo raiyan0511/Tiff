@@ -5,117 +5,115 @@ import QtQuick.Layouts 1.0
 Page {
     id: pageChooseSummonersId
 
-    GridLayout {
+    ColumnLayout {
         anchors.fill: parent
-        rows: 5
-        columns: 2
 
-        TextField {
-            id: topSumm1Name
-            Layout.row: 0
-            Layout.column: 0
-            onTextChanged: summonersViewModel.topSumm1Name = topSumm1Name.text
+        Text {
+            id: titleText
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            text: qsTr("Tiff")
         }
 
-        TextField {
-            id: topSumm2Name
-            Layout.row: 0
-            Layout.column: 1
-            onTextChanged: summonersViewModel.topSumm2Name = topSumm2Name.text
+        GridLayout {
+            rows: 5
+            columns: 3
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+            Label {
+                text: "Top"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.topSumm1Name = textAt(currentIndex)
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.topSumm2Name = textAt(currentIndex)
+            }
+
+            Label {
+                text: "Jungle"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.jngSumm1Name = textAt(currentIndex)
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.jngSumm2Name = textAt(currentIndex)
+            }
+
+            Label {
+                text: "Mid"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.midSumm1Name = textAt(currentIndex)
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.midSumm2Name = textAt(currentIndex)
+            }
+
+            Label {
+                text: "Adc"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.adcSumm1Name = textAt(currentIndex)
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.adcSumm2Name = textAt(currentIndex)
+            }
+
+            Label {
+                text: "Support"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.supSumm1Name = textAt(currentIndex)
+            }
+
+            ComboBox {
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                model: SpellList {}
+                onCurrentIndexChanged: summonersViewModel.supSumm2Name = textAt(currentIndex)
+            }
         }
-
-                TextField {
-                    id: jngSumm1Name
-                    Layout.row: 1
-                    Layout.column: 0
-                    onTextChanged: summonersViewModel.jngSumm1Name = jngSumm1Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: jngSumm2Name
-                    Layout.row: 1
-                    Layout.column: 1
-                    onTextChanged: summonersViewModel.jngSumm2Name = jngSumm2Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: midSumm1Name
-                    Layout.row: 2
-                    Layout.column: 0
-                    onTextChanged: summonersViewModel.midSumm1Name = midSumm1Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: midSumm2Name
-                    Layout.row: 2
-                    Layout.column: 1
-                    onTextChanged: summonersViewModel.midSumm2Name = midSumm2Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: adcSumm1Name
-                    Layout.row: 3
-                    Layout.column: 0
-                    onTextChanged: summonersViewModel.adcSumm1Name = adcSumm1Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: adcSumm2Name
-                    Layout.row: 3
-                    Layout.column: 1
-                    onTextChanged: summonersViewModel.adcSumm2Name = adcSumm2Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: supSumm1Name
-                    Layout.row: 4
-                    Layout.column: 0
-                    onTextChanged: summonersViewModel.supSumm1Name = supSumm1Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-                TextField {
-                    id: supSumm2Name
-                    Layout.row: 4
-                    Layout.column: 1
-                    onTextChanged: summonersViewModel.supSumm2Name = supSumm2Name.text
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                }
-
-    }
-    Item {
-        Layout.alignment: Qt.AlignBottom | Qt.AlignHCenter
-        Layout.fillHeight: false
-        Layout.fillWidth: false
-        Layout.preferredHeight: parent.height / 10
-        Layout.preferredWidth: parent.width / 1.5
 
         Button {
-            id: createUserButton
-            Layout.fillHeight: false
-            Layout.fillWidth: false
-            Layout.preferredHeight: parent.height * 0.75
-            Layout.preferredWidth: parent.width / 4
-
-            text: qsTr("Go to Interface")
+            id: goToMainScreenButtonId
+            text: qsTr("Track!")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             onClicked:
             {
                 pageList.currentIndex = 1
             }
-            Keys.onReturnPressed:
-            {
-            }
         }
     }
 }
-

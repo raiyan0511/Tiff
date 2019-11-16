@@ -157,60 +157,70 @@ int SummonersViewModel::GetSupSumm2Cooldown() const
 void SummonersViewModel::SetTopSumm1Name(QString summName)
 {
     m_TopSumm1Name = summName;
+    SetTopSumm1Cooldown(m_SpellCooldownMap[summName]);
     emit topSumm1NameChanged();
 }
 
 void SummonersViewModel::SetTopSumm2Name(QString summName)
 {
     m_TopSumm2Name = summName;
+    SetTopSumm2Cooldown(m_SpellCooldownMap[summName]);
     emit topSumm2NameChanged();
 }
 
 void SummonersViewModel::SetJngSumm1Name(QString summName)
 {
     m_JngSumm1Name = summName;
+    SetJngSumm1Cooldown(m_SpellCooldownMap[summName]);
     emit jngSumm1NameChanged();
 }
 
 void SummonersViewModel::SetJngSumm2Name(QString summName)
 {
     m_JngSumm2Name = summName;
+    SetJngSumm2Cooldown(m_SpellCooldownMap[summName]);
     emit jngSumm2NameChanged();
 }
 
 void SummonersViewModel::SetMidSumm1Name(QString summName)
 {
     m_MidSumm1Name = summName;
+    SetMidSumm1Cooldown(m_SpellCooldownMap[summName]);
     emit midSumm1NameChanged();
 }
 
 void SummonersViewModel::SetMidSumm2Name(QString summName)
 {
     m_MidSumm2Name = summName;
+    SetMidSumm2Cooldown(m_SpellCooldownMap[summName]);
     emit midSumm2NameChanged();
 }
 
 void SummonersViewModel::SetAdcSumm1Name(QString summName)
 {
     m_AdcSumm1Name = summName;
+    SetAdcSumm1Cooldown(m_SpellCooldownMap[summName]);
     emit adcSumm1NameChanged();
 }
 
 void SummonersViewModel::SetAdcSumm2Name(QString summName)
 {
     m_AdcSumm2Name = summName;
+    SetAdcSumm2Cooldown(m_SpellCooldownMap[summName]);
     emit adcSumm2NameChanged();
 }
 
 void SummonersViewModel::SetSupSumm1Name(QString summName)
 {
     m_SupSumm1Name = summName;
+    SetSupSumm1Cooldown(m_SpellCooldownMap[summName]);
     emit supSumm1NameChanged();
 }
 
 void SummonersViewModel::SetSupSumm2Name(QString summName)
 {
     m_SupSumm2Name = summName;
+    SetSupSumm2Cooldown(m_SpellCooldownMap[summName]);
     emit supSumm2NameChanged();
 }
 

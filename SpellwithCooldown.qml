@@ -3,30 +3,33 @@ import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 
 RowLayout {
-    property alias spellName: spellNameId.text
-    property alias spellCooldown: progressBarId.to
+    property alias spellName: spellName.text
+    property alias spellCooldown: spellCooldown.to
 
-    Text {
-        id: spellNameId
+    Label {
+        id: spellName
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
     }
     ProgressBar {
-        id: progressBarId
+        id: spellCooldown
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         from: 0
     }
     Button{
-        id: spellButtonId
+        id: button
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         onClicked: {
-            progressBarId.value = progressBarId.to
-            timerId.restart()
+            spellCooldown.value = spellCooldown.to
+            timer.restart()
         }
     }
     Timer {
-        id: timerId
+        id: timer
         interval: 1000
         repeat: true
         running: true
         onTriggered: {
-            progressBarId.value -= 1.0
+            spellCooldown.value -= 1.0
         }
     }
 }

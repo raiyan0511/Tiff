@@ -1,18 +1,28 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.0
 
 RowLayout {
-    property alias spell1Name: summonerSpell1.spellName
-    property alias spell1Cooldown: summonerSpell1.spellCooldown
-    property alias spell2Name: summonerSpell2.spellName
-    property alias spell2Cooldown: summonerSpell2.spellCooldown
+    property alias role: role.text
 
-    width: parent.width
+    property alias spell1Name: spell1.spellName
+    property alias spell1Cooldown: spell1.spellCooldown
 
-    SpellwithCooldown {
-        id: summonerSpell1
+    property alias spell2Name: spell2.spellName
+    property alias spell2Cooldown: spell2.spellCooldown
+
+    Label {
+        id: role
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
     }
+
     SpellwithCooldown {
-        id: summonerSpell2
+        id: spell1
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+    }
+
+    SpellwithCooldown {
+        id: spell2
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
     }
 }

@@ -138,6 +138,13 @@ private:
     int m_AdcSumm2Cooldown;
     int m_SupSumm1Cooldown;
     int m_SupSumm2Cooldown;
+
+    std::map<QString, int> m_SpellCooldownMap = \
+    {{"Barrier", 180}, {"Cleanse",180}, \
+     {"Exhaust", 180}, {"Flash",300}, \
+     {"Ghost", 180}, {"Heal", 240}, \
+     {"Ignite", 180}, {"Smite", 20}, \
+     {"Teleport", 300}};
 };
 
 #endif // SUMMONERSVIEWMODEL_H
