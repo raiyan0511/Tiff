@@ -5,6 +5,8 @@ import QtQuick.Layouts 1.0
 Page {
     id: pageChooseSummonersId
 
+    property var spellChoices: SpellList {}
+
     ColumnLayout {
         anchors.fill: parent
 
@@ -16,92 +18,37 @@ Page {
 
         GridLayout {
             rows: 5
-            columns: 3
+            columns: 1
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            Label {
-                text: "Top"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            CustomizeSummoner{
+                role: "Top"
+                roleViewModel: topViewModel
+                spellListModel: spellChoices
             }
 
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: topViewModel.summ1Name = textAt(currentIndex)
+            CustomizeSummoner{
+                role: "Jungle"
+                roleViewModel: jngViewModel
+                spellListModel: spellChoices
             }
 
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: topViewModel.summ2Name = textAt(currentIndex)
+            CustomizeSummoner{
+                role: "Mid"
+                roleViewModel: midViewModel
+                spellListModel: spellChoices
             }
 
-            Label {
-                text: "Jungle"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            CustomizeSummoner{
+                role: "Adc"
+                roleViewModel: adcViewModel
+                spellListModel: spellChoices
             }
 
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: jngViewModel.summ1Name = textAt(currentIndex)
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: jngViewModel.summ2Name = textAt(currentIndex)
-            }
-
-            Label {
-                text: "Mid"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: midViewModel.summ1Name = textAt(currentIndex)
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: midViewModel.summ2Name = textAt(currentIndex)
-            }
-
-            Label {
-                text: "Adc"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: adcViewModel.summ1Name = textAt(currentIndex)
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: adcViewModel.summ2Name = textAt(currentIndex)
-            }
-
-            Label {
-                text: "Support"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: supViewModel.summ1Name = textAt(currentIndex)
-            }
-
-            ComboBox {
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                model: SpellList {}
-                onCurrentIndexChanged: supViewModel.summ2Name = textAt(currentIndex)
+            CustomizeSummoner{
+                role: "Support"
+                roleViewModel: supViewModel
+                spellListModel: spellChoices
             }
         }
 
