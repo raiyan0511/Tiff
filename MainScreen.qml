@@ -20,58 +20,33 @@ Page {
             columns: 1
 
             Summoner {
-                id: summoner1
+                id: top
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-                role: "Top"
-                spell1Name: topViewModel.summ1Name
-                spell1Cooldown: topViewModel.summ1Cooldown
-                spell2Name: topViewModel.summ2Name
-                spell2Cooldown: topViewModel.summ2Cooldown
+                roleViewModel: topViewModel
             }
 
             Summoner {
-                id: summoner2
+                id: jng
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-                role: "Jungle"
-                spell1Name: jngViewModel.summ1Name
-                spell1Cooldown: jngViewModel.summ1Cooldown
-                spell2Name: jngViewModel.summ2Name
-                spell2Cooldown: jngViewModel.summ2Cooldown
+                roleViewModel: jngViewModel
             }
 
             Summoner {
-                id: summoner3
+                id: mid
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-                role: "Mid"
-                spell1Name: midViewModel.summ1Name
-                spell1Cooldown: midViewModel.summ1Cooldown
-                spell2Name: midViewModel.summ2Name
-                spell2Cooldown: midViewModel.summ2Cooldown
+                roleViewModel: midViewModel
             }
 
             Summoner {
-                id: summoner4
+                id: adc
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-                role: "Adc"
-                spell1Name: adcViewModel.summ1Name
-                spell1Cooldown: adcViewModel.summ1Cooldown
-                spell2Name: adcViewModel.summ2Name
-                spell2Cooldown: adcViewModel.summ2Cooldown
+                roleViewModel: adcViewModel
             }
 
             Summoner {
-                id: summoner5
+                id: sup
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-                role: "Support"
-                spell1Name: supViewModel.summ1Name
-                spell1Cooldown: supViewModel.summ1Cooldown
-                spell2Name: supViewModel.summ2Name
-                spell2Cooldown: supViewModel.summ2Cooldown
+                roleViewModel: supViewModel
             }
         }
 
@@ -82,6 +57,12 @@ Page {
 
             onClicked:
             {
+                topViewModel.reset()
+                jngViewModel.reset()
+                midViewModel.reset()
+                adcViewModel.reset()
+                supViewModel.reset()
+
                 pageList.currentIndex = 0
             }
         }

@@ -11,11 +11,11 @@ int main(int argc, char *argv[])
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QQuickView view;
 
-    SummonerViewModel topViewModel;
-    SummonerViewModel jngViewModel;
-    SummonerViewModel midViewModel;
-    SummonerViewModel adcViewModel;
-    SummonerViewModel supViewModel;
+    SummonerViewModel topViewModel("Top");
+    SummonerViewModel jngViewModel("Jungle");
+    SummonerViewModel midViewModel("Mid");
+    SummonerViewModel adcViewModel("Adc");
+    SummonerViewModel supViewModel("Support");
 
     view.rootContext()->setContextProperty("topViewModel", &topViewModel);
     view.rootContext()->setContextProperty("jngViewModel", &jngViewModel);

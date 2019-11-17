@@ -5,8 +5,6 @@ import QtQuick.Layouts 1.0
 Page {
     id: pageChooseSummonersId
 
-    property var spellChoices: SpellList {}
-
     ColumnLayout {
         anchors.fill: parent
 
@@ -22,33 +20,23 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             CustomizeSummoner{
-                role: "Top"
                 roleViewModel: topViewModel
-                spellListModel: spellChoices
             }
 
             CustomizeSummoner{
-                role: "Jungle"
                 roleViewModel: jngViewModel
-                spellListModel: spellChoices
             }
 
             CustomizeSummoner{
-                role: "Mid"
                 roleViewModel: midViewModel
-                spellListModel: spellChoices
             }
 
             CustomizeSummoner{
-                role: "Adc"
                 roleViewModel: adcViewModel
-                spellListModel: spellChoices
             }
 
             CustomizeSummoner{
-                role: "Support"
                 roleViewModel: supViewModel
-                spellListModel: spellChoices
             }
         }
 
