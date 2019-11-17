@@ -27,13 +27,13 @@ Page {
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.topSumm1Name = textAt(currentIndex)
+                onCurrentIndexChanged: topViewModel.summ1Name = textAt(currentIndex)
             }
 
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.topSumm2Name = textAt(currentIndex)
+                onCurrentIndexChanged: topViewModel.summ2Name = textAt(currentIndex)
             }
 
             Label {
@@ -44,13 +44,13 @@ Page {
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.jngSumm1Name = textAt(currentIndex)
+                onCurrentIndexChanged: jngViewModel.summ1Name = textAt(currentIndex)
             }
 
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.jngSumm2Name = textAt(currentIndex)
+                onCurrentIndexChanged: jngViewModel.summ2Name = textAt(currentIndex)
             }
 
             Label {
@@ -61,13 +61,13 @@ Page {
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.midSumm1Name = textAt(currentIndex)
+                onCurrentIndexChanged: midViewModel.summ1Name = textAt(currentIndex)
             }
 
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.midSumm2Name = textAt(currentIndex)
+                onCurrentIndexChanged: midViewModel.summ2Name = textAt(currentIndex)
             }
 
             Label {
@@ -78,13 +78,13 @@ Page {
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.adcSumm1Name = textAt(currentIndex)
+                onCurrentIndexChanged: adcViewModel.summ1Name = textAt(currentIndex)
             }
 
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.adcSumm2Name = textAt(currentIndex)
+                onCurrentIndexChanged: adcViewModel.summ2Name = textAt(currentIndex)
             }
 
             Label {
@@ -95,13 +95,13 @@ Page {
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.supSumm1Name = textAt(currentIndex)
+                onCurrentIndexChanged: supViewModel.summ1Name = textAt(currentIndex)
             }
 
             ComboBox {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 model: SpellList {}
-                onCurrentIndexChanged: summonersViewModel.supSumm2Name = textAt(currentIndex)
+                onCurrentIndexChanged: supViewModel.summ2Name = textAt(currentIndex)
             }
         }
 

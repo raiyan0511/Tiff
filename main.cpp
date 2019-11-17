@@ -3,7 +3,7 @@
 #include <QQuickView>
 #include <QQmlContext>
 
-#include "SummonersViewModel.h"
+#include "SummonerViewModel.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,8 +11,17 @@ int main(int argc, char *argv[])
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QQuickView view;
 
-    SummonersViewModel summonersViewModel;
-    view.rootContext()->setContextProperty("summonersViewModel", &summonersViewModel);
+    SummonerViewModel topViewModel;
+    SummonerViewModel jngViewModel;
+    SummonerViewModel midViewModel;
+    SummonerViewModel adcViewModel;
+    SummonerViewModel supViewModel;
+
+    view.rootContext()->setContextProperty("topViewModel", &topViewModel);
+    view.rootContext()->setContextProperty("jngViewModel", &jngViewModel);
+    view.rootContext()->setContextProperty("midViewModel", &midViewModel);
+    view.rootContext()->setContextProperty("adcViewModel", &adcViewModel);
+    view.rootContext()->setContextProperty("supViewModel", &supViewModel);
 
     view.setSource(url);
 

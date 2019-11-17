@@ -3,12 +3,12 @@
         <file>main.qml</file>
         <file>SpellwithCooldown.qml</file>
         <file>Summoner.qml</file>
-        <file>SummonersViewModel.h</file>
-        <file>SummonersViewModel.cpp</file>
         <file>ChooseSummoners.qml</file>
         <file>MasterController.qml</file>
         <file>PageList.qml</file>
         <file>MainScreen.qml</file>
         <file>SpellList.qml</file>
+        <file>SummonerViewModel.h</file>
+        <file>SummonerViewModel.cpp</file>
     </qresource>
 </RCC>

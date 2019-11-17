@@ -24,10 +24,10 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                 role: "Top"
-                spell1Name: summonersViewModel.topSumm1Name
-                spell1Cooldown: summonersViewModel.topSumm1Cooldown
-                spell2Name: summonersViewModel.topSumm2Name
-                spell2Cooldown: summonersViewModel.topSumm2Cooldown
+                spell1Name: topViewModel.summ1Name
+                spell1Cooldown: topViewModel.summ1Cooldown
+                spell2Name: topViewModel.summ2Name
+                spell2Cooldown: topViewModel.summ2Cooldown
             }
 
             Summoner {
@@ -35,10 +35,10 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                 role: "Jungle"
-                spell1Name: summonersViewModel.jngSumm1Name
-                spell1Cooldown: summonersViewModel.jngSumm1Cooldown
-                spell2Name: summonersViewModel.jngSumm2Name
-                spell2Cooldown: summonersViewModel.jngSumm2Cooldown
+                spell1Name: jngViewModel.summ1Name
+                spell1Cooldown: jngViewModel.summ1Cooldown
+                spell2Name: jngViewModel.summ2Name
+                spell2Cooldown: jngViewModel.summ2Cooldown
             }
 
             Summoner {
@@ -46,10 +46,10 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                 role: "Mid"
-                spell1Name: summonersViewModel.midSumm1Name
-                spell1Cooldown: summonersViewModel.midSumm1Cooldown
-                spell2Name: summonersViewModel.midSumm2Name
-                spell2Cooldown: summonersViewModel.midSumm2Cooldown
+                spell1Name: midViewModel.summ1Name
+                spell1Cooldown: midViewModel.summ1Cooldown
+                spell2Name: midViewModel.summ2Name
+                spell2Cooldown: midViewModel.summ2Cooldown
             }
 
             Summoner {
@@ -57,10 +57,10 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                 role: "Adc"
-                spell1Name: summonersViewModel.adcSumm1Name
-                spell1Cooldown: summonersViewModel.adcSumm1Cooldown
-                spell2Name: summonersViewModel.adcSumm2Name
-                spell2Cooldown: summonersViewModel.adcSumm2Cooldown
+                spell1Name: adcViewModel.summ1Name
+                spell1Cooldown: adcViewModel.summ1Cooldown
+                spell2Name: adcViewModel.summ2Name
+                spell2Cooldown: adcViewModel.summ2Cooldown
             }
 
             Summoner {
@@ -68,10 +68,10 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
                 role: "Support"
-                spell1Name: summonersViewModel.supSumm1Name
-                spell1Cooldown: summonersViewModel.supSumm1Cooldown
-                spell2Name: summonersViewModel.supSumm2Name
-                spell2Cooldown: summonersViewModel.supSumm2Cooldown
+                spell1Name: supViewModel.summ1Name
+                spell1Cooldown: supViewModel.summ1Cooldown
+                spell2Name: supViewModel.summ2Name
+                spell2Cooldown: supViewModel.summ2Cooldown
             }
         }
 
