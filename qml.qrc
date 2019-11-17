@@ -10,5 +10,6 @@
         <file>SpellList.qml</file>
         <file>SummonerViewModel.h</file>
         <file>SummonerViewModel.cpp</file>
+        <file>CustomizeSummoner.qml</file>
     </qresource>
 </RCC>
