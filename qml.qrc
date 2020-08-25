@@ -6,7 +6,7 @@
         <file>ChooseSummoners.qml</file>
         <file>MasterController.qml</file>
         <file>PageList.qml</file>
-        <file>MainScreen.qml</file>
+        <file>TrackerScreen.qml</file>
         <file>SpellList.qml</file>
         <file>SummonerViewModel.h</file>
         <file>SummonerViewModel.cpp</file>

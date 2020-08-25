@@ -2,57 +2,55 @@ import QtQuick 2.0
 import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.0
 
-Page {
+Page
+{
     id: pageChooseSummonersId
 
-    property var spellChoices: SpellList {}
-
-    ColumnLayout {
+    ColumnLayout
+    {
         anchors.fill: parent
 
-        Text {
+        Text
+        {
             id: titleText
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             text: qsTr("Tiff")
         }
 
-        GridLayout {
+        GridLayout
+        {
             rows: 5
             columns: 1
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            CustomizeSummoner{
-                role: "Top"
+            CustomizeSummoner
+            {
                 roleViewModel: topViewModel
-                spellListModel: spellChoices
             }
 
-            CustomizeSummoner{
-                role: "Jungle"
+            CustomizeSummoner
+            {
                 roleViewModel: jngViewModel
-                spellListModel: spellChoices
             }
 
-            CustomizeSummoner{
-                role: "Mid"
+            CustomizeSummoner
+            {
                 roleViewModel: midViewModel
-                spellListModel: spellChoices
             }
 
-            CustomizeSummoner{
-                role: "Adc"
+            CustomizeSummoner
+            {
                 roleViewModel: adcViewModel
-                spellListModel: spellChoices
             }
 
-            CustomizeSummoner{
-                role: "Support"
+            CustomizeSummoner
+            {
                 roleViewModel: supViewModel
-                spellListModel: spellChoices
             }
         }
 
-        Button {
+        Button
+        {
             id: goToMainScreenButtonId
             text: qsTr("Track!")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter

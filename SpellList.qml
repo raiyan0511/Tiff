@@ -1,34 +1,45 @@
 import QtQuick 2.0
 
-ListModel {
-    ListElement {
+ListModel
+{
+    ListElement
+    {
         spellName: "Choose Spell"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Barrier"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Cleanse"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Exhaust"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Flash"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Ghost"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Heal"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Ignite"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Smite"
     }
-    ListElement {
+    ListElement
+    {
         spellName: "Teleport"
     }
 }

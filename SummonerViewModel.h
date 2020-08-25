@@ -12,8 +12,10 @@ class SummonerViewModel : public QObject
     Q_PROPERTY(int summ1Cooldown READ GetSumm1Cooldown WRITE SetSumm1Cooldown NOTIFY summ1CooldownChanged)
     Q_PROPERTY(int summ2Cooldown READ GetSumm2Cooldown WRITE SetSumm2Cooldown NOTIFY summ2CooldownChanged)
 
+    Q_PROPERTY(QString role READ GetRole CONSTANT)
+
 public:
-    SummonerViewModel();
+    SummonerViewModel(QString role);
 
     void SetSumm1Name(QString summName);
     void SetSumm2Name(QString summName);
@@ -27,6 +29,8 @@ public:
     int GetSumm1Cooldown() const;
     int GetSumm2Cooldown() const;
 
+    QString GetRole() const;
+
     void Reset();
 
 signals:
@@ -36,11 +40,12 @@ signals:
     void summ1CooldownChanged();
     void summ2CooldownChanged();
 
-
 public slots:
     void reset(){Reset();}
 
 private:
+    QString m_Role;
+
     QString m_Summ1Name;
     QString m_Summ2Name;
 

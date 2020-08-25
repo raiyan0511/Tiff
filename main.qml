@@ -3,7 +3,8 @@ import QtQuick.Window 2.12
 import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.13
 
-Window {
+Window
+{
     visible: true
     width: 1000
     height: 1000
