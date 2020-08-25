@@ -1,15 +1,18 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.12
 
-StackLayout{
+StackLayout
+{
     id: pageList
     anchors.fill: parent
     currentIndex: 0
 
-    Repeater{
+    Repeater
+    {
         model: PageList {}
 
-        Loader{
+        Loader
+        {
             source: model.url
         }
     }

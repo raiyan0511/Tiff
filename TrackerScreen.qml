@@ -2,55 +2,65 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.0
 
-Page {
+Page
+{
     id: pageMainScreenId
 
-    ColumnLayout {
+    ColumnLayout
+    {
         anchors.fill: parent
 
-        Text {
+        Text
+        {
             id: titleText
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             text: qsTr("Tiff")
         }
 
-        GridLayout {
+        GridLayout
+        {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             rows: 5
             columns: 1
 
-            Summoner {
+            Summoner
+            {
                 id: top
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 roleViewModel: topViewModel
             }
 
-            Summoner {
+            Summoner
+            {
                 id: jng
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 roleViewModel: jngViewModel
             }
 
-            Summoner {
+            Summoner
+            {
                 id: mid
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 roleViewModel: midViewModel
             }
 
-            Summoner {
+            Summoner
+            {
                 id: adc
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 roleViewModel: adcViewModel
             }
 
-            Summoner {
+            Summoner
+            {
                 id: sup
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 roleViewModel: supViewModel
             }
         }
 
-        Button {
+        Button
+        {
             id: goToChoosingScreenButtonId
             text: qsTr("Choose Spells")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter

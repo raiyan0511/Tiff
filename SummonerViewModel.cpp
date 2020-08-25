@@ -1,7 +1,5 @@
 #include "SummonerViewModel.h"
 
-#include <iostream>
-
 SummonerViewModel::SummonerViewModel(QString role):
     m_Role(role),
     m_Summ1Name(""),
@@ -13,16 +11,10 @@ SummonerViewModel::SummonerViewModel(QString role):
 
 void SummonerViewModel::Reset()
 {
-    std::cout << "Role: " << m_Role.toStdString()
-              << " Summ 1: " << m_Summ1Name.toStdString()
-              << " Summ 1 Cooldown: " << m_Summ1Cooldown
-              << " Summ 2: " << m_Summ2Name.toStdString()
-              << " Summ 2 Cooldown: " << m_Summ2Cooldown;
-
-    m_Summ1Name = "";
-    m_Summ2Name = "";
-    m_Summ1Cooldown = 0;
-    m_Summ2Cooldown = 0;
+    SetSumm1Name("");
+    SetSumm2Name("");
+    SetSumm1Cooldown(0);
+    SetSumm2Cooldown(0);
 }
 
 void SummonerViewModel::SetSumm1Name(QString summName)

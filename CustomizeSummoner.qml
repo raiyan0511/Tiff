@@ -2,23 +2,27 @@ import QtQuick 2.0
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 
-RowLayout {
+RowLayout
+{
     property var spellChoices: SpellList {}
     property var roleViewModel
 
-    Label {
+    Label
+    {
         id: role
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         text: roleViewModel.role
     }
 
-    ComboBox {
+    ComboBox
+    {
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         model: spellChoices
         onCurrentIndexChanged: roleViewModel.summ1Name = textAt(currentIndex)
     }
 
-    ComboBox {
+    ComboBox
+    {
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         model: spellChoices
         onCurrentIndexChanged: roleViewModel.summ2Name = textAt(currentIndex)

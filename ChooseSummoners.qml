@@ -2,45 +2,55 @@ import QtQuick 2.0
 import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.0
 
-Page {
+Page
+{
     id: pageChooseSummonersId
 
-    ColumnLayout {
+    ColumnLayout
+    {
         anchors.fill: parent
 
-        Text {
+        Text
+        {
             id: titleText
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             text: qsTr("Tiff")
         }
 
-        GridLayout {
+        GridLayout
+        {
             rows: 5
             columns: 1
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            CustomizeSummoner{
+            CustomizeSummoner
+            {
                 roleViewModel: topViewModel
             }
 
-            CustomizeSummoner{
+            CustomizeSummoner
+            {
                 roleViewModel: jngViewModel
             }
 
-            CustomizeSummoner{
+            CustomizeSummoner
+            {
                 roleViewModel: midViewModel
             }
 
-            CustomizeSummoner{
+            CustomizeSummoner
+            {
                 roleViewModel: adcViewModel
             }
 
-            CustomizeSummoner{
+            CustomizeSummoner
+            {
                 roleViewModel: supViewModel
             }
         }
 
-        Button {
+        Button
+        {
             id: goToMainScreenButtonId
             text: qsTr("Track!")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter

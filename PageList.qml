@@ -1,10 +1,13 @@
 import QtQuick 2.0
 
-ListModel {
-    ListElement {
+ListModel
+{
+    ListElement
+    {
         url: "ChooseSummoners.qml"
     }
-    ListElement {
-        url: "MainScreen.qml"
+    ListElement
+    {
+        url: "TrackerScreen.qml"
     }
 }
