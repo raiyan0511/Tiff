@@ -15,6 +15,8 @@ void SummonerViewModel::Reset()
     SetSumm2Name("");
     SetSumm1Cooldown(0);
     SetSumm2Cooldown(0);
+
+    emit choicesReset();
 }
 
 void SummonerViewModel::SetSumm1Name(QString summName)

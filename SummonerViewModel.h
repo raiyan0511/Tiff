@@ -40,6 +40,8 @@ signals:
     void summ1CooldownChanged();
     void summ2CooldownChanged();
 
+    void choicesReset();
+
 public slots:
     void reset(){Reset();}
 
